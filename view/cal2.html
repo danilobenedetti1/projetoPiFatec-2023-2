@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora Vue</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+    }
+
+    #app {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    input {
+      width: 100%;
+      height: 40px;
+      font-size: 24px;
+      text-align: right;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 5px 10px;
+    }
+
+    button {
+      width: 25%;
+      height: 40px;
+      font-size: 18px;
+      margin: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #f0f0f0;
+    }
+
+    #equals {
+      background-color: #ff9900;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <h1>Calculadora Vue</h1>
+    <input type="text" v-model="display" readonly>
+    <div>
+      <button @click="appendToDisplay('7')">7</button>
+      <button @click="appendToDisplay('8')">8</button>
+      <button @click="appendToDisplay('9')">9</button>
+      <button @click="appendToDisplay('+')">+</button>
+    </div>
+    <div>
+      <button @click="appendToDisplay('4')">4</button>
+      <button @click="appendToDisplay('5')">5</button>
+      <button @click="appendToDisplay('6')">6</button>
+      <button @click="appendToDisplay('-')">-</button>
+    </div>
+    <div>
+      <button @click="appendToDisplay('1')">1</button>
+      <button @click="appendToDisplay('2')">2</button>
+      <button @click="appendToDisplay('3')">3</button>
+      <button @click="appendToDisplay('*')">*</button>
+    </div>
+    <div>
+      <button @click="appendToDisplay('0')">0</button>
+      <button @click="clearDisplay">C</button>
+      <button id="equals" @click="calculateResult">=</button>
+      <button @click="appendToDisplay('/')">/</button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+  <script>
+    new Vue({
+      el: '#app',
+      data: {
+        display: '',
+      },
+      methods: {
+        appendToDisplay(value) {
+          this.display += value;
+        },
+        clearDisplay() {
+          this.display = '';
+        },
+        calculateResult() {
+          try {
+            this.display = eval(this.display);
+          } catch (error) {
+            this.display = 'Erro';
+          }
+        },
+      },
+    });
+  </script>
+</body>
+</html>
