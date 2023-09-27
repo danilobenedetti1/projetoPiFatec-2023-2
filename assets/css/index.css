@@ -1,0 +1,52 @@
+/* Estilo para o cabeçalho retangular verde */
+.header-rect {
+    background-color: #00cc00; /* Verde */
+    text-align: center;
+    padding: 20px;
+}
+
+.header-rect h1 {
+    margin: 0;
+    color: #fff; /* Texto branco */
+}
+
+/* Estilo para o menu de trapézio */
+.trapezoid-menu {
+    text-align: center;
+}
+
+.trapezoid-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.trapezoid-menu ul li {
+    display: inline-block;
+    margin: 0 10px;
+    position: relative;
+}
+
+.trapezoid-menu ul li a {
+    display: block;
+    padding: 10px 20px;
+    background-color: #00aa00; /* Verde mais claro */
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+    z-index: 1;
+}
+
+/* Estilo para criar a forma de trapézio */
+.trapezoid-menu ul li a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid #00aa00; /* Verde mais claro */
+    z-index: -1;
+    transform: translateY(-20px);
+}
