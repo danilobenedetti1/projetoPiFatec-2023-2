@@ -1,71 +1,99 @@
 /* Estilo para o cabeçalho retangular da frente */
-.header-rect {
-    background-image: linear-gradient(to right, #5E8899, #89b7c8);
-    background: flex;
+.header {
+    background-color: #775FE6;
     color: #fff;
     padding: 10px;
     display: flex;
     align-items: center;
+    height: 120px;
+    justify-content: center; /* Centraliza horizontalmente */
+}
+
+.logo1 {
+  height: 90px;
+  width: 150px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.logo2 {
+  height: 80px;
+  width: 200px;
+  margin-bottom: 10px;
 }
 
 .sublinhado {
     margin: 20px;
-    font-size: 22px;
+    font-size: 15px;
     margin-left: 60px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+    display: inline-;
   }
-
-.logo {
-    display: inline-block;
-    position: absotute;
-    width: 170px;
-    height: 90px;
-    border-radius: 5%;
-  }
-
 
 
 /* Estilo para o trapézio isósceles verde claro */
+/* E estilo para toda a parte 1(embaixo do header)*/
 .trapezoid-container {
     text-align: center;
     position: relative;
-
-            
-}
-
-.trapezoid-link {
-    position:fixed;
-    top: 157px;
+    position:absolute;
+    margin-top: 15px;
     left: 50%;
     transform: translate(-50% , -50%);
     background-color: #8ACFCD; /* Verde claro */
     padding: 30px 250px;
-    clip-path: polygon(0% 0%, 100% 0%, 83% 100%, 18% 100%); /* Define o trapézio invertido */
+    clip-path: polygon(13% 35%, 88% 35%, 83% 60%, 18% 60%); /* Define o trapézio invertido */
     color: #181C1F; /* Texto preto */
-    text-decoration: none;
-}v
-
-.trapezoid-link:hover {
-    background-color: #8ACFCD; /* Verde um pouco mais escuro ao passar o mouse */
 }
 
-.trapezoid-link:active {
-    background-color: #003300; /* Verde ainda mais escuro ao clicar */
+.parte1 {
+  background-color: #DBEAFF;
+  height: 550px;
+  width: 100%;
+  margin-top:-20px;
 }
 
-.trapezoid-link:focus {
-    outline: none; /* Remove a borda ao focar */
+.parte12 {
+  display: flex;
 }
+
+
+.mecanico{
+  height: 430px;
+  margin: 0 auto;
+  transform: translate(-110%); /* Centraliza a imagem usando o centroide */
+  margin-top: 90px;
+  z-index: 0;
+}
+
+.retangulo-mecanico {
+  position: relative;
+  height:150px;
+  width: 30rem;
+  justify-content: center;
+  margin: 0 auto;
+  background-color: #C3DAFA;
+  margin-top: -70px;
+  z-index: 1;
+}
+
+.text1 {
+  width: 300px;
+  font-size: 20px;
+  margin: 10%;
+}
+
+/**/
 
 nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    display: flex;
+    align-items: center;
   }
   
   nav ul li {
-    display: inline;
-    margin-right: 10px;
+    margin: 0 10px;
   }
   nav ul li a {
     color: #fff;
@@ -75,4 +103,16 @@ nav ul {
 
 .aba:hover {
   text-decoration: underline;
+}
+
+
+/*PARTE 2 - NOSSOS SERVIÇOS*/
+
+.parte2 {
+  background-image: url(/assets/img/img-parte2.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 550px;
+  width: 100%;
+  opacity: 0.5;
 }
