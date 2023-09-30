@@ -1,52 +1,118 @@
-/* Estilo para o cabeçalho retangular verde */
-.header-rect {
-    background-color: #00cc00; /* Verde */
+/* Estilo para o cabeçalho retangular da frente */
+.header {
+    background-color: #775FE6;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    height: 120px;
+    justify-content: center; /* Centraliza horizontalmente */
+}
+
+.logo1 {
+  height: 90px;
+  width: 150px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.logo2 {
+  height: 80px;
+  width: 200px;
+  margin-bottom: 10px;
+}
+
+.sublinhado {
+  margin: 20px;
+  font-size: 15px;
+  margin-left: 60px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  display: inline-flex;
+}
+
+
+/* Estilo para o trapézio isósceles verde claro */
+/* E estilo para toda a parte 1(embaixo do header)*/
+.trapezoid-container {
     text-align: center;
-    padding: 20px;
-}
-
-.header-rect h1 {
-    margin: 0;
-    color: #fff; /* Texto branco */
-}
-
-/* Estilo para o menu de trapézio */
-.trapezoid-menu {
-    text-align: center;
-}
-
-.trapezoid-menu ul {
-    list-style: none;
-    padding: 0;
-}
-
-.trapezoid-menu ul li {
-    display: inline-block;
-    margin: 0 10px;
     position: relative;
+    position:absolute;
+    margin-top: 20px;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    background-color: #8ACFCD; /* Verde claro */
+    padding: 40px 350px;
+    clip-path: polygon(13% 35%, 88% 35%, 83% 60%, 18% 60%); /* Define o trapézio invertido */
+    color: #181C1F; /* Texto preto */
 }
 
-.trapezoid-menu ul li a {
-    display: block;
-    padding: 10px 20px;
-    background-color: #00aa00; /* Verde mais claro */
+.parte1 {
+  background-color: #DBEAFF;
+  height: 550px;
+  width: 100%;
+  margin-top:-20px;
+}
+
+.parte12 {
+  display: flex;
+}
+
+
+.mecanico{
+  height: 430px;
+  margin: 0 auto;
+  transform: translate(-110%); /* Centraliza a imagem usando o centroide */
+  margin-top: 90px;
+  z-index: 0;
+}
+
+.retangulo-mecanico {
+  position: relative;
+  height:150px;
+  width: 30rem;
+  justify-content: center;
+  margin: 0 auto;
+  background-color: #C3DAFA;
+  margin-top: -70px;
+  z-index: 1;
+}
+
+.text1 {
+  width: 300px;
+  font-size: 20px;
+  margin: 10%;
+}
+
+/**/
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  nav ul li {
+    margin: 0 10px;
+  }
+  nav ul li a {
     color: #fff;
     text-decoration: none;
-    position: relative;
-    z-index: 1;
+  }  
+
+
+.aba:hover {
+  text-decoration: underline;
 }
 
-/* Estilo para criar a forma de trapézio */
-.trapezoid-menu ul li a::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 0;
-    border-left: 20px solid transparent;
-    border-right: 20px solid transparent;
-    border-bottom: 20px solid #00aa00; /* Verde mais claro */
-    z-index: -1;
-    transform: translateY(-20px);
+
+/*PARTE 2 - NOSSOS SERVIÇOS*/
+
+.parte2 {
+  background-image: url(/assets/img/img-parte2.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 550px;
+  width: 100%;
+  opacity: 0.5;
 }
