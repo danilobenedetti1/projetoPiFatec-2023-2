@@ -1,0 +1,266 @@
+html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Estilo para o cabeçalho retangular da frente */
+  .header {
+    background-color: #775FE6;
+    width: 100%;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    height: 100px;
+    justify-content: center; /* Centraliza horizontalmente */
+  }
+  
+  .logo1 {
+    height: 90px;
+    width: 150px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  .logo2 {
+    height: 80px;
+    width: 200px;
+    margin-bottom: 10px;
+  }
+  
+  .img-user {
+    height: 45px;
+    width: 45px;
+    margin-right: 5%;
+    margin-top: -11px;
+  }
+  
+  .div-login {
+    display: flex;
+    position: absolute;
+    right: 5%;
+  }
+  
+  .text-login {
+    position: static;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 17px;
+    text-align: center;
+    position: relative;
+    top: -20%;
+    right: -15%;
+  }
+  
+  .text-login:hover {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+    text-decoration: underline;
+  }
+  
+  
+  /*Parte 1 - Netcar */
+  
+  .sublinhado {
+    margin: 20px;
+    font-size: 18px;
+    margin-left: 60px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+    display: inline-flex;
+  }
+  
+  /* Estilo para o trapézio isósceles verde claro */
+  /* E estilo para toda a parte 1(embaixo do header)*/
+  .trapezoid-container {
+      text-align: center;
+      position: relative;
+      position:absolute;
+      margin-top: 20px;
+      left: 50%;
+      transform: translate(-50% , -50%);
+      background-color: #8ACFCD; /* Verde claro */
+      padding: 40px 350px;
+      clip-path: polygon(23% 35%, 80% 35%, 73% 65%, 30% 65%); /* Define o trapézio invertido */
+      color: #181C1F; /* Texto preto */
+  }
+  
+  .aba:hover {
+    text-decoration: underline;
+  }
+  .aba {
+    margin: 10px
+  }
+  
+  .parte1 {
+    background-color: #DBEAFF;
+    height: 550px;
+    width: 100%;
+    margin-top:-20px;
+  }
+  
+/* content que contem os formulários */
+.content {
+    width: 500px;
+    margin: 0px auto;
+    position: relative;
+  }
+  
+  /* formatando o cabeçalho dos formulários */
+  h1 {
+    font-size: 48px;
+    color: #066a75;
+    padding: 10px 0;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 30px;
+  }
+  h1:after {
+    content: " ";
+    display: block;
+    width: 100%;
+    height: 2px;
+    margin-top: 10px;
+    background: -webkit-linear-gradient(
+      left,
+      rgba(147, 184, 189, 0) 0%,
+      rgba(147, 184, 189, 0.8) 20%,
+      rgba(147, 184, 189, 1) 53%,
+      rgba(147, 184, 189, 0.8) 79%,
+      rgba(147, 184, 189, 0) 100%
+    );
+    background: linear-gradient(
+      left,
+      rgba(147, 184, 189, 0) 0%,
+      rgba(147, 184, 189, 0.8) 20%,
+      rgba(147, 184, 189, 1) 53%,
+      rgba(147, 184, 189, 0.8) 79%,
+      rgba(147, 184, 189, 0) 100%
+    );
+  }
+  
+/*estilo do botão submit */
+input[type="submit"] {
+    width: 100% !important;
+    cursor: pointer;
+    background: #3d9db3;
+    padding: 8px 5px;
+    color: #fff;
+    font-size: 20px;
+    border: 1px solid #fff;
+    margin-bottom: 10px;
+    text-shadow: 0 1px 1px #333;
+  
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+  
+    transition: all 0.2s linear;
+  }
+  input[type="submit"]:hover {
+    background: #4ab3c6;
+  }
+  
+
+
+  .div-retangulo2 {
+    height: 100px;
+    width: 10rem;
+    border-left: #181C1F solid 3px;
+    border-right: #181C1F solid 3px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    font-size: 20px;
+  }
+  
+  .div-retangulo {
+    height: 150px;
+    width: 10rem;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    font-size: 20px;
+  }
+  /* estilos para para ambos os formulários */
+#cadastro,
+#login {
+  position: absolute;
+  top: 0px;
+  width: 88%;
+  padding: 18px 6% 60px 6%;
+  margin: 0 0 35px 0;
+  background: rgb(247, 247, 247);
+  border: 1px solid rgba(147, 184, 189, 0.8);
+
+  -webkit-box-shadow: 5px;
+  border-radius: 5px;
+
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease;
+  -webkit-animation-fill-mode: both;
+
+  animation-duration: 0.5s;
+  animation-timing-function: ease;
+  animation-fill-mode: both;
+}
+
+#paracadastro:target ~ .content #cadastro,
+#paralogin:target ~ .content #login {
+  z-index: 2;
+  -webkit-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
+
+  -webkit-animation-delay: 0.1s;
+  animation-delay: 0.1s;
+}
+#registro:target ~ .content #login,
+#paralogin:target ~ .content #cadastro {
+  -webkit-animation-name: fadeOutLeft;
+  animation-name: fadeOutLeft;
+}
+
+/*fadeInLeft*/
+@-webkit-keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/*fadeOutLeft*/
+@-webkit-keyframes fadeOutLeft {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(-20px);
+  }
+}
+
+@keyframes fadeOutLeft {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+}
+  
