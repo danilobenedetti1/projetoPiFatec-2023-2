@@ -29,68 +29,22 @@
             <nav>
                 <ul class="sublinhado">
                     <li><a href="index.html" class="aba">Netcar</a></li>
-                    <li><a href="noticias.html" class="aba">Serviços</a></li>
-                    <li><a href="açoes.html" class="aba">Agendamento</a></li>
+                    <li><a href="dashboard.html" class="aba">Serviços</a></li>
+                    <li><a href="cadastroDeVeiculo.html" class="aba">Agendamento</a></li>
                     <li><a href="commodities.html" class="aba">Contato</a></li>
                     <li><a href="login.html" class="aba">Login</a></li>
                 </ul>
             </nav>
         </div>
         <div class="menu"><i class="bi bi-list"></i></div>
-    <div>
-        <section class="grid grid-template-2">
-            <div class="item content">
-                <div class="row">
-                    <div class="col">
-                        <nav class="navbar navbar-light bg-light nave">
-
-                            <form class="form-inline" id="pesquisar">
-                                <div class="input-group mb-3">
-                                    <input type="text" class="form-control" placeholder="Placa ou veículo"
-                                        aria-describedby="button-addon2" name="consultaplaca">
-                                    <button class="btn btn-outline-success" type="submit" id="button-addon2"
-                                        style="padding: 0px 10px!important;font-size: 18pt;"><i
-                                            class="bi bi-arrow-right-circle-fill"></i></button>
-                                </div>
-                            </form>
-                        </nav>
-                    </div>
-                </div>
-                <div class="row row-cols-1 row-cols-md-3 g-4 lista" id="lista">
-                    <div class="col">
-                        <div class="card h-100">
-                            <a href="/agendar">
-                                <div class="card-body">
-                                    <i class="bi bi-plus-circle"></i>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+       
+            <h2></h2>
+            <div class="input-container">
+                <input type="text" id="placaInput" placeholder="Digite a placa do veículo">
+                <button id="buscarBtn">Buscar</button>
             </div>
-            <div class="item sidenav">
-                <img src="image.jpg" id="fotomenu" alt="" srcset="">
-                <h4 id="nomemenu"></h4>
-                <button type="button" class="btn btn-outline-success" id="logout"><i class="bi bi-box-arrow-left"></i>
-                    Logout</button>
-                <div class="botoes">
-                    <a href="/inicio"><button type="button" class="btn btn-light">Início</button></a>
-                    <a href="/agendar"><button type="button" class="btn btn-light">Agendar Serviço</button></a>
-                    <a href="/historico"><button type="button" class="btn btn-light select">Agendamentos
-                            Anteriores</button></a>
-                    <a href="/veiculos"><button type="button" class="btn btn-light">Meus Veículos</button> </a>
-                    <a href="configuracao"><button type="button" class="btn btn-light">Editar Dados</button></a>
-                    <a href="https://api.whatsapp.com/send?phone=5516991746516"><button type="button"
-                            class="btn btn-light">Suporte</button> </a>
-                    <h6 class="loja">Conheça nossos produtos:</h6>
-                    <a href="https://kevinbrandao.github.io/portfolio.github.io/" target="_blank"><button type="button"
-                            class="btn btn-light">Site <i class="bi bi-arrow-up-right-square"></i></button></a>
-                    <img class="logoinit" src="logo.png" alt="" srcset="">
-                </div>
-            </div>
-        </section>
-    </div>
+            <div class="result" id="result">Informações do Veiculo</div>
     </section>
+    <script src="/assets/js/dashboard.js"></script>
 </body>
-
 </html>

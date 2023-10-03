@@ -1,13 +1,9 @@
-// import { createApp } from 'vue'
-// <script>
-//   const { createApp, ref } = Vue
+const buscarBtn = document.getElementById('buscarBtn');
+const placaInput = document.getElementById('placaInput');
+const result = document.getElementById('result');
 
-//   createApp({
-//     setup() {
-//       const message = ref('Hello vue!')
-//       return {
-//         message
-//       }
-//     }
-//   }).mount('#app')
-// </script>
+buscarBtn.addEventListener('click', function () {
+    const placa = placaInput.value.trim().toUpperCase();
+    // depois fazer a parte de buscar registros no backend v2
+    result.textContent = `Placa do veículo: ${placa}`;
+});
