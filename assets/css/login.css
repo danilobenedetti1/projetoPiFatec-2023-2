@@ -98,7 +98,7 @@ html {
 /* content que contem os formulários */
 .content {
     width: 500px;
-    margin: 0px auto;
+    margin: -580px auto;
     position: relative;
   }
   
@@ -263,4 +263,21 @@ input[type="submit"] {
     transform: translateX(-20px);
   }
 }
+
+/*FOOTER*/
+
+footer {
+    margin-top: 30px;
+    height: 80px;
+    background-color: #836ee2;
+    color: #fff;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+  }
   
+  .textfooter {
+    margin-left: 30px;
+    margin-top: 20px;
+    font-size: 20px;
+  }
