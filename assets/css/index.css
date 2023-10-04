@@ -15,15 +15,15 @@ html {
 }
 
 .logo1 {
-  height: 90px;
-  width: 150px;
+  height: 80px;
+  width: 140px;
   margin-right: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 .logo2 {
-  height: 80px;
-  width: 200px;
-  margin-bottom: 10px;
+  height: 70px;
+  width: 190px;
+  margin-bottom:20px;
 }
 
 .img-user {
@@ -36,7 +36,7 @@ html {
 .div-login {
   display: flex;
   position: absolute;
-  right: 5%;
+  right: 2%;
 }
 
 .text-login {
@@ -46,8 +46,9 @@ html {
   font-size: 17px;
   text-align: center;
   position: relative;
-  top: -20%;
+  top: 0%;
   right: -15%;
+  margin-right: 20px;
 }
 
 .text-login:hover {
@@ -188,7 +189,7 @@ nav ul {
 
 .titulo-serviços{
   position: absolute;
-  top: 15%;
+  top: 20%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -225,30 +226,41 @@ nav ul {
   transform: translate(3px, 10px);
 }
 
-.agen-serviços {
+.aten-rapido {
   position: relative;
+  display: flex;
   border-radius: 50px;
-  box-shadow: 0px 0px 5px #444444;
+  border-color: #f71c1c solid 3px;
+  box-shadow: 0px 0px 10px #444444;
   width: 25%;
-  height: 50px;
-  background-color: #8ACFCD;
+  height: 60px;
+  background-color: #face0d;
   top: 60%;
   left: 50%;
   transform: translateX(-50%);
+  cursor: pointer; /* Altera o cursor ao passar o mouse sobre o botão */
 }
-.agen-serviços:hover {
-  background-color: #74acab;
+.aten-rapido:hover {
+  background-color: #fff023;
 }
-.agen-serviços:active {
+.aten-rapido:active {
   box-shadow: 0 0 0 0 #74acab, inset 3px 3px 3px #74acab;
+}
+
+.icon-whats {
+  position: relative;
+  height: 30px;
+  width: 30px;
+  padding: 4%;
+  margin-left: 8%;
 }
 
 .text-agen-serviço {
   display: flex;
-  font-size: 25px;
+  font-size: 28px;
   position: relative;
   top: 50%;
-  left: 50%;
+  left: 32%;
   transform: translate(-50%, -50%);
   justify-content: center;
   align-items: center;
@@ -260,7 +272,7 @@ nav ul {
 
 .parte3 {
   display: flex;
-  height: 580px;
+  height: 600px;
   width: 100%;
   margin-top: 10px;
 }
@@ -273,7 +285,7 @@ nav ul {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 23px;
   margin-left: 10%;
-  margin-top: 10%;
+  margin-top: 8%;
 }
 
 .img-localizacao {
@@ -284,21 +296,88 @@ nav ul {
 
 .icons {
   display: flex;
-  padding: 15px;
+  padding: 0px;
 }
 
 .contato-p2 {
   display: flex;
-  width: 50%;
-  height: 580px;
+  width: 60%;
+  height: 600px;
   justify-content: center;
   align-items: center;
 }
 
-.img-contato {
-  height: 400px;
-  width: 60%;
+.envie-email {
+  height: 540px;
+  width: 70%;
+  background-color: transparent;
+  background-image: linear-gradient(190deg, #1183DC 0%, #0A4D94 100%);
+  border-radius: 8px;
+  margin-right: 10%;
+  margin-top: 10%;
 }
+
+.email-dados{
+  padding: 7px;
+  margin-bottom: 10px;
+  margin-left: 5%;
+}
+
+.titulo-envie-email{
+  font-size: 29px;
+  color: #f5f5f5;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 5%;
+  margin-top:5%
+}
+
+.text-email-dados {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 18px;
+  color: #f5f5f5;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.input-email-dados,
+.input-email-dados-2 {
+    width: 90%;
+    padding: 5px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+}
+
+.input-email-dados-2 {
+  height: 70px;;
+}
+
+.botao-enviar-email{
+  background: linear-gradient( 60.37deg, #00D09E -0.25%, #117BF7 85.08%);
+  width: 100px;
+  height: 50px;
+  color: #ffffff;
+  border: none;
+  font-size: 18px;
+  cursor: pointer; /* Altera o cursor ao passar o mouse sobre o botão */
+  padding: 15px;
+  border-radius: 30px;
+  margin-left: 6%;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight:bolder;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 2px 2px 0px #444444;
+}
+.botao-enviar-email:hover {
+  background-color: #74acab;
+}
+.botao-enviar-email:active {
+  background-color: #45a049;
+  box-shadow: 0 0 0 0 #c5c5c5, inset 5px 5px 5px #c6caca;
+}
+
 
 
 /*FOOTER*/
