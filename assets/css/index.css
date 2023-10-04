@@ -70,7 +70,7 @@ html {
 /* E estilo para toda a parte 1(embaixo do header)*/
 .trapezoid-container {
     text-align: center;
-    position: relative;
+    position: relative fixed;
     position:absolute;
     margin-top: 20px;
     left: 50%;
@@ -91,7 +91,7 @@ html {
 .parte1 {
   background-color: #DBEAFF;
   height: 550px;
-  width: 100%;
+  width: 110%;
   margin-top:-20px;
 }
 
@@ -101,23 +101,25 @@ html {
 
 .mecanico{
   height: 430px;
-  margin: 0 auto;
-  transform: translate(-110%); /* Centraliza a imagem usando o centroide */
-  margin-top: 90px;
+  position: relative fixed;
+  position:absolute;
+  left: 50%;
+  transform: translate(-50% , -50%); /* Centraliza a imagem usando o centroide */
+  margin-top: 350px;
   z-index: 0;
 }
 
 .retangulo-mecanico {
   display: flex;
-  position: relative;
+  position: relative fixed;
+  position: absolute;
+  left: 50%;
+  top: 660px;
+  transform: translate(-50% , -50%);
   height:150px;
   width: 30rem;
-  justify-content: center;
-  margin: 0 auto;
   background-color: #C3DAFA;
-  margin-top: -70px;
   z-index: 1;
-  justify-content: center;
   align-items: center; /* Centraliza o conteúdo verticalmente */
 }
 

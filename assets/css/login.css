@@ -70,7 +70,7 @@ html {
   /* E estilo para toda a parte 1(embaixo do header)*/
   .trapezoid-container {
       text-align: center;
-      position: relative;
+      position: relative fixed;
       position:absolute;
       margin-top: 20px;
       left: 50%;
