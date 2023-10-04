@@ -64,6 +64,7 @@ html {
     margin-left: 60px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
     display: inline-flex;
+    list-style-type: none;
   }
   
   /* Estilo para o trapézio isósceles verde claro */
@@ -85,15 +86,27 @@ html {
     text-decoration: underline;
   }
   .aba {
-    margin: 10px
+    margin: 10px;
+    color: #fff;
+    margin: 20px;
+    font-size: 18px;
+    margin-left: 60px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+    display: inline-flex;
+    text-decoration: none;
+    list-style-type: none;
+    
   }
   
-  .parte1 {
+  .parte01 {
     background-color: #DBEAFF;
     height: 780px;
-    width: 110%;
+    width: 100%;
     margin-top:-20px;
   }
+
+
+  
   
 /* content que contem os formulários */
 .content {
@@ -102,6 +115,9 @@ html {
     position: relative;
   }
   
+  
+
+
   /* formatando o cabeçalho dos formulários */
   h1 {
     font-size: 48px;
@@ -201,30 +217,7 @@ input[type="submit"] {
     background: #4ab3c6;
   }
   
-
-
-  .div-retangulo2 {
-    height: 100px;
-    width: 10rem;
-    border-left: #181C1F solid 3px;
-    border-right: #181C1F solid 3px;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center; /* Centraliza o conteúdo verticalmente */
-    font-size: 20px;
-  }
-  
-  .div-retangulo {
-    height: 150px;
-    width: 10rem;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center; /* Centraliza o conteúdo verticalmente */
-    font-size: 20px;
-  }
-  /* estilos para para ambos os formulários */
+/* estilos para para ambos os formulários */
 #cadastro,
 #login {
   position: absolute;
