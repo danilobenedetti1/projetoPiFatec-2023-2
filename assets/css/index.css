@@ -21,9 +21,9 @@ html {
   margin-bottom: 20px;
 }
 .logo2 {
-  height: 70px;
-  width: 190px;
-  margin-bottom:20px;
+  height: 80px;
+  width: 200px;
+  margin-bottom: 10px;
 }
 
 .img-user {
@@ -255,9 +255,9 @@ nav ul {
   margin-left: 8%;
 }
 
-.text-agen-serviço {
+.text-aten-rapido {
   display: flex;
-  font-size: 28px;
+  font-size: 25px;
   position: relative;
   top: 50%;
   left: 32%;
@@ -383,6 +383,9 @@ nav ul {
 /*FOOTER*/
 
 footer {
+  position:absolute;
+  margin-bottom: 0px;
+  width: 100%;
   margin-top: 30px;
   height: 80px;
   background-color: #836ee2;

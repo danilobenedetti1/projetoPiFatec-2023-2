@@ -1,6 +1,4 @@
-html {
-    scroll-behavior: smooth;
-  }
+
   
   /* Estilo para o cabeçalho retangular da frente */
   .header {
@@ -15,10 +13,10 @@ html {
   }
   
   .logo1 {
-    height: 90px;
-    width: 150px;
+    height: 80px;
+    width: 140px;
     margin-right: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
   .logo2 {
     height: 80px;
@@ -36,7 +34,7 @@ html {
   .div-login {
     display: flex;
     position: absolute;
-    right: 5%;
+    right: 2%;
   }
   
   .text-login {
@@ -46,8 +44,9 @@ html {
     font-size: 17px;
     text-align: center;
     position: relative;
-    top: -20%;
+    top: 0%;
     right: -15%;
+    margin-right: 20px;
   }
   
   .text-login:hover {
@@ -64,38 +63,45 @@ html {
     margin-left: 60px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
     display: inline-flex;
-    list-style-type: none;
   }
   
   /* Estilo para o trapézio isósceles verde claro */
   /* E estilo para toda a parte 1(embaixo do header)*/
   .trapezoid-container {
-      text-align: center;
-      position: relative fixed;
-      position:absolute;
-      margin-top: 20px;
-      left: 50%;
-      transform: translate(-50% , -50%);
-      background-color: #8ACFCD; /* Verde claro */
-      padding: 40px 350px;
-      clip-path: polygon(23% 35%, 80% 35%, 73% 65%, 30% 65%); /* Define o trapézio invertido */
-      color: #181C1F; /* Texto preto */
+    text-align: center;
+    position: relative fixed;
+    position:absolute;
+    margin-top: 20px;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    background-color: #8ACFCD; /* Verde claro */
+    padding: 40px 350px;
+    clip-path: polygon(23% 35%, 80% 35%, 73% 65%, 30% 65%); /* Define o trapézio invertido */
+    color: #181C1F; /* Texto preto */
   }
+
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  nav ul li {
+    margin: 0 10px;
+  }
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+  }  
+
   
   .aba:hover {
     text-decoration: underline;
   }
   .aba {
     margin: 10px;
-    color: #fff;
-    margin: 20px;
-    font-size: 18px;
-    margin-left: 60px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
-    display: inline-flex;
-    text-decoration: none;
-    list-style-type: none;
-    
   }
   
   .parte01 {
@@ -104,8 +110,6 @@ html {
     width: 100%;
     margin-top:-20px;
   }
-
-
   
   
 /* content que contem os formulários */
