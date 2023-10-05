@@ -342,15 +342,36 @@ nav ul {
 .input-email-dados,
 .input-email-dados-2 {
     width: 90%;
+    height: 20px;
     padding: 5px;
     font-size: 16px;
     border: none;
     border-radius: 5px;
+    border: 1px solid #b2b2b2;
+
+    -webkit-border-radius: 3px;
+  
+    -webkit-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+    box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear;
 }
 
 .input-email-dados-2 {
   height: 70px;;
 }
+
+input {
+  outline: none;
+}
+
+::-webkit-input-placeholder {
+  color: #bebcbcac;
+  font-style: italic;
+  font-size: 16px;
+}
+
 
 .botao-enviar-email{
   background: linear-gradient( 60.37deg, #00D09E -0.25%, #117BF7 85.08%);
