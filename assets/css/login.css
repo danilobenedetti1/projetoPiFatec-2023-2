@@ -1,10 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
 
+:root {
+  --cor-header:#775FE6;
+  --cor-trapesio: #8ACFCD;
+  --cor-background: #DBEAFF;
+  --branco: #F5F5F5;
+  --cor-texto-preto: #181C1F;
+  --fonte-principal: 'Montserrat', sans-serif;
+  --fonte-secundaria: 'Krona One', sans-serif;
+  --fonte-footer: Arial, Helvetica, sans-serif;
+}
+  
+  
   
   /* Estilo para o cabeçalho retangular da frente */
   .header {
-    background-color: #775FE6;
+    background-color: var(--cor-header);
     width: 100%;
-    color: #fff;
+    color: var(--branco);
     padding: 10px;
     display: flex;
     align-items: center;
@@ -21,6 +34,7 @@
   .logo2 {
     height: 80px;
     width: 200px;
+    margin-right: 25px;
     margin-bottom: 10px;
   }
   
@@ -34,14 +48,16 @@
   .div-login {
     display: flex;
     position: absolute;
-    right: 2%;
+    right: 5%;
   }
   
   .text-login {
     position: static;
-    color: #ffffff;
+    color: var(--branco);
     text-decoration: none;
     font-size: 17px;
+    font-family: var(--fonte-principal);
+    font-weight: 200;
     text-align: center;
     position: relative;
     top: 0%;
@@ -74,10 +90,10 @@
     margin-top: 20px;
     left: 50%;
     transform: translate(-50% , -50%);
-    background-color: #8ACFCD; /* Verde claro */
+    background-color: var(--cor-trapesio);
     padding: 40px 350px;
     clip-path: polygon(23% 35%, 80% 35%, 73% 65%, 30% 65%); /* Define o trapézio invertido */
-    color: #181C1F; /* Texto preto */
+    color: var(--cor-texto-preto);
   }
 
   nav ul {
@@ -92,8 +108,10 @@
     margin: 0 10px;
   }
   nav ul li a {
-    color: #fff;
+    color: var(--branco);
     text-decoration: none;
+    font-weight: 600;
+    font-family: var(--fonte-principal);
   }  
 
   
@@ -105,9 +123,9 @@
   }
   
   .parte01 {
-    background-color: #DBEAFF;
-    height: 780px;
-    width: 100%;
+    background-color: var(--cor-background);
+    height: 700px;
+    width: 101%;
     margin-top:-20px;
   }
   
@@ -115,7 +133,7 @@
 /* content que contem os formulários */
 .content {
     width: 550px;
-    margin: -700px auto;
+    margin: -610px auto;
     position: relative;
   }
   
@@ -125,10 +143,10 @@
   /* formatando o cabeçalho dos formulários */
   h1 {
     font-size: 48px;
-    color: #066a75;
+    color: var(--branco);
     padding: 0px 0;
-    font-family: Arial, sans-serif;
-    font-weight: bold;
+    font-family: var(--fonte-principal);
+    font-weight: 800;
     text-align: center;
     padding-bottom: 10px;
   }
@@ -160,25 +178,32 @@
   
 p {
     margin-bottom: -4px;
+    color: var(--branco);
+    font-family: var(--fonte-secundaria);
+    font-size: 10px;
   }
   p:first-child {
     margin: 0px;
   }
   label {
-    color: #405c60;
+    color: var(--branco);
     position: relative;
+    font-family: var(--fonte-secundaria);
+    font-size: 12px;
   }
   
   /**** advanced input styling ****/
   /* placeholder */
   ::-webkit-input-placeholder {
-    color: #bebcbc;
+    color: var(--branco);
     font-style: italic;
+    font-family: var(--fonte-secundaria);
   }
   input:-moz-placeholder,
   textarea:-moz-placeholder {
-    color: #bebcbc;
+    color: var(--branco);
     font-style: italic;
+    font-family: var(--fonte-secundaria);
   }
   input {
     outline: none;
@@ -206,9 +231,11 @@ input[type="submit"] {
     cursor: pointer;
     background: #3d9db3;
     padding: 8px 5px;
-    color: #fff;
+    color: var(--branco);
     font-size: 20px;
-    border: 1px solid #fff;
+    font-family: var(--fonte-principal);
+    font-weight: bolder;
+    border: 1px solid var(--branco);
     margin-bottom: 10px;
     text-shadow: 0 1px 1px #333;
   
@@ -229,10 +256,9 @@ input[type="submit"] {
   width: 88%;
   padding: 18px 6% 60px 6%;
   margin: 0 0 35px 0;
-  background: rgb(247, 247, 247);
-  border: 1px solid rgba(147, 184, 189, 0.8);
+  background-color: transparent;
+  background-image: linear-gradient(190deg, #1183DC 0%, #0A4D94 100%);
   
-  -webkit-box-shadow: 5px;
   border-radius: 5px;
 
   -webkit-animation-duration: 0.5s;
@@ -308,18 +334,19 @@ input[type="submit"] {
 /*FOOTER*/
 
 footer {
-    margin-top: 680px;
+    margin-top: 600px;
     height: 80px;
-    background-color: #836ee2;
-    color: #fff;
-    padding: 10px;
+    background-color: var(--cor-header);
+    color: var(--branco);
+    padding: 10px 0 0 0;
     align-items: center;
     justify-content: center;
-    width: 110%;
+    width: 101%;
   }
   
   .textfooter {
     margin-left: 30px;
     margin-top: 20px;
     font-size: 20px;
+    font-family: var(--fonte-footer);
   }
