@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $senha = $_POST['senha_login'];
 
     // Verifica se o email e senha são válidos
-    $query = "SELECT id, nome FROM fatec_admin4 WHERE email='$email' AND senha=md5('$senha')";
+    $query = "SELECT id, nome FROM netcar_user WHERE email='$email' AND senha=md5('$senha')";
     $result = mysqli_query($conn, $query);
 
     if (mysqli_num_rows($result) == 1) {
