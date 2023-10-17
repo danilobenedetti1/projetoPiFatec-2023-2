@@ -1,19 +1,33 @@
+
+:root {
+  --cor-header:#775FE6;
+  --cor-trapesio: #8ACFCD;
+  --cor-background: #DBEAFF;
+  --branco: #F5F5F5;
+  --cor-texto-preto: #181C1F;
+  --fonte-principal: 'Montserrat', sans-serif;
+  --fonte-secundaria: 'Krona One', sans-serif;
+  --fonte-footer: Arial, Helvetica, sans-serif;
+}
+
+
 /* Estilo para o cabeçalho retangular da frente */
 .header {
-    background-color: #775FE6;
-    color: #fff;
-    padding: 65px;
-    display: flex;
-    align-items: center;
-    height: 100px;
-    justify-content: center; /* Centraliza horizontalmente */
+  background-color: var(--cor-header);
+  width: 100%;
+  color: var(--branco);
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  height: 120px;
+  justify-content: center; /* Centraliza horizontalmente */
 }
 
 .logo1 {
-  height: 90px;
-  width: 150px;
+  height: 80px;
+  width: 140px;
   margin-right: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 .logo2 {
   height: 80px;
@@ -21,10 +35,42 @@
   margin-bottom: 10px;
 }
 
+.img-user {
+  height: 45px;
+  width: 45px;
+  margin-right: 5%;
+  margin-top: -11px;
+}
+
+.div-login {
+  display: flex;
+  position: absolute;
+  right: 2%;
+}
+
+.text-login {
+  position: static;
+  color: var(--branco);
+  text-decoration: none;
+  font-size: 17px;
+  font-family: var(--fonte-principal);
+  font-weight: 200;
+  text-align: center;
+  position: relative;
+  top: 0%;
+  right: -15%;
+  margin-right: 20px;
+}
+
+.text-login:hover {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  text-decoration: underline;
+}
+
 .sublinhado {
   margin: 20px;
-  font-size: 15px;
-  margin-left: 50px;
+  font-size: 18px;
+  margin-left: 60px;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
   display: inline-flex;
 }
@@ -32,16 +78,16 @@
 /* Estilo para o trapézio isósceles verde claro */
 /* E estilo para toda a parte 1(embaixo do header)*/
 .trapezoid-container {
-    text-align: center;
-    position: relative;
-    position:absolute;
-    margin-top: 18px;
-    left: 50%;
-    transform: translate(-50% , -50%);
-    background-color: #8ACFCD; /* Verde claro */
-    padding: 30px 350px;
-    clip-path: polygon(13% 35%, 88% 35%, 83% 60%, 18% 60%); /* Define o trapézio invertido */
-    color: #181C1F; /* Texto preto */
+  text-align: center;
+  position: relative fixed;
+  position:absolute;
+  margin-top: 20px;
+  left: 50%;
+  transform: translate(-50% , -50%);
+  background-color: #8ACFCD; /* Verde claro */
+  padding: 40px 350px;
+  clip-path: polygon(23% 35%, 80% 35%, 73% 65%, 30% 65%); /* Define o trapézio invertido */
+  color: #181C1F; /* Texto preto */
 }
 /* barra para pesquisar placa e veiculo */
 /* .form-inline {
@@ -49,6 +95,13 @@
     margin-top: 10px;
     padding: 1px 500px;
 } */
+
+.aba:hover {
+  text-decoration: underline;
+}
+.aba {
+  margin: 10px
+}
 
 .parte1 {
   background-color: #DBEAFF;
