@@ -189,3 +189,23 @@ h2 {
   margin-top: 20px;
   text-align: center;
 }
+
+/*FOOTER*/
+
+footer {
+  margin-top: auto;
+  height: 80px;
+  background-color: var(--cor-header);
+  color: var(--branco);
+  padding: 10px 0 0 0;
+  align-items: center;
+  justify-content: center;
+  width: 101%;
+}
+
+.textfooter {
+  margin-left: 30px;
+  margin-top: 20px;
+  font-size: 20px;
+  font-family: var(--fonte-footer);
+}
