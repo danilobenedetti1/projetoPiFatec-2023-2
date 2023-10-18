@@ -27,6 +27,18 @@
     <section class="header">
         <img src="/assets/img/logo1.png" class="logo1">
         <img src="/assets/img/logo2.png" class="logo2">
+          <!-- <h1 class="header-rect2"> </h1> -->
+          <div class="div-login">
+            <div>
+              <a href="./login.html#paralogin" class="text-login">Login</a>
+            </div>
+            <div>
+              <img src="/assets/img/user circle.png" class="img-user">
+            </div>
+            <div>
+              <a href="./login.html#paracadastro" class="text-login">Cadastro</a>
+            </div>
+          </div>
     </section>
     <section class="parte1">
         <div class="trapezoid-container">
@@ -55,11 +67,14 @@
                     <label for="data1">Data:</label>
                     <input type="date" id="data1" name="data1" required>
     
-                    <label for="time1">Time:</label>
+                    <label for="time1">Horário para agendamento:</label>
                     <input type="time" id="time1" name="time1" required>
     
                     <label for="modelo1">Modelo do Carro:</label>
                     <input type="text" id="modelo1" name="modelo1" required>
+
+                    <label for="placa1">Placa:</label>
+                    <input type="text" id="placa1" name="placa1" required>
                 </div>
     
                 <button type="button" id="adicionarVeiculo">Adicionar Mais Veículos</button>
@@ -96,6 +111,9 @@
 
                 <label for="modelo${veiculoCount}">Modelo do Carro:</label>
                 <input type="text" id="modelo${veiculoCount}" name="modelo${veiculoCount}" required>
+
+                <label for="modelo${veiculoCount}">Placa do Carro:</label>
+                <input type="text" id="modelo${veiculoCount}" name="placa${veiculoCount}" required>
             `;
 
             document.getElementById('agendamentoForm').insertBefore(veiculoDiv, document.getElementById('adicionarVeiculo'));
@@ -118,5 +136,10 @@
         });
     </script>
 </body>
+
+<footer class="footer">
+        <hr>
+        <p class="textfooter">&copy; Netcar | Todos os direitos reservados.</p>
+</footer>
 
 </html>

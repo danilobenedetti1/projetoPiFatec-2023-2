@@ -84,7 +84,7 @@
   margin-top: 20px;
   left: 50%;
   transform: translate(-50% , -50%);
-  background-color: #8ACFCD; /* Verde claro */
+  background-color: var(--cor-trapesio); /* Verde claro */
   padding: 40px 350px;
   clip-path: polygon(23% 35%, 80% 35%, 73% 65%, 30% 65%); /* Define o trapézio invertido */
   color: #181C1F; /* Texto preto */
@@ -104,7 +104,7 @@
 }
 
 .parte1 {
-  background-color: #DBEAFF;
+  background-color: var(--cor-background);
   height: 550px;
   width: 100%;
   margin-top:-20px;
@@ -123,8 +123,9 @@ nav ul {
     margin: 0 10px;
   }
   nav ul li a {
-    color: #fff;
+    color: var(--branco);
     text-decoration: none;
+    font-weight: 600;
   }  
 
 .parte2 {
@@ -138,7 +139,7 @@ nav ul {
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  background-color: var(--branco);
   margin: 0;
   padding: 0;
 }
@@ -147,7 +148,7 @@ body {
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #fff;
+  background-color: var(--branco);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
 }
@@ -170,7 +171,7 @@ h2 {
 .input-container input[type="text"] {
   padding: 10px;
   width: 70%;
-  border: 1px solid #8ACFCD;
+  border: 1px solid var(--cor-trapesio);
   border-radius: 5px 0 0 5px;
   outline: none;
 }
@@ -178,7 +179,7 @@ h2 {
 .input-container button {
   padding: 10px 20px;
   background-color: #8ACFCD;
-  color: #fff;
+  color: var(--branco);
   border: none;
   border-radius: 0 5px 5px 0;
   cursor: pointer;
