@@ -19,7 +19,7 @@ html {
 /* Estilo para o cabeçalho retangular da frente */
 .header {
   background-color: var(--cor-header);
-  width: 100%;
+  width: 98.6%;
   color: var(--branco);
   padding: 10px;
   display: flex;
@@ -108,7 +108,7 @@ html {
 .parte1 {
   background-color: #DBEAFF;
   height: 550px;
-  width: 110%;
+  width: 100%;
   margin-top:-20px;
 }
 
@@ -355,7 +355,7 @@ nav ul {
 
 .contato-p1 {
   height: 580px;
-  width: 50%;
+  width: 40%;
   justify-content: center;
   align-items: center;
   font-family: var(--fonte-principal);
@@ -377,19 +377,20 @@ nav ul {
 
 .contato-p2 {
   display: flex;
-  width: 60%;
+  width: 40%;
   height: 600px;
   justify-content: center;
   align-items: center;
+
 }
 
 .envie-email {
   height: 540px;
-  width: 70%;
+  width: 90%;
   background-color: transparent;
   background-image: linear-gradient(190deg, #1183DC 0%, #0A4D94 100%);
   border-radius: 8px;
-  margin-right: 10%;
+  margin-right: 0%;
   margin-top: 10%;
 }
 
@@ -449,13 +450,14 @@ input {
 }
 
 
-.botao-enviar-email{
+.link-botao-enviar-email{
   background: linear-gradient( 60.37deg, #00D09E -0.25%, #117BF7 85.08%);
-  width: 100px;
-  height: 50px;
+  text-decoration: none;
+  width: 80px;
+  height: 25px;
   color: #ffffff;
   border: none;
-  font-size: 18px;
+  font-size: 15px;
   cursor: pointer; /* Altera o cursor ao passar o mouse sobre o botão */
   padding: 15px;
   border-radius: 30px;
@@ -467,12 +469,24 @@ input {
   align-items: center;
   box-shadow: 2px 2px 0px #444444;
 }
-.botao-enviar-email:hover {
+.link-botao-enviar-email:hover {
   background-color: #74acab;
 }
-.botao-enviar-email:active {
+.link-botao-enviar-email:active {
   background-color: #45a049;
   box-shadow: 0 0 0 0 #c5c5c5, inset 5px 5px 5px #c6caca;
+}
+
+.contato-p3{
+  height: 600px;
+  margin-left: 2%;
+}
+.img-seta-subir{
+  width: 60px; 
+  height: 60px;
+  margin-top: 35%;
+  margin-right: 50%;
+  position: absolute;
 }
 
 
