@@ -113,7 +113,11 @@ html {
 }
 
 .parte12 {
-  display: flex;
+  display: inline-flex;
+  margin-left: 5%;
+  margin-top: 50px;
+  text-align: justify;
+  width: 30rem;
 }
 
 .mecanico{
@@ -122,8 +126,8 @@ html {
   position:absolute;
   left: 50%;
   transform: translate(-50% , -50%); /* Centraliza a imagem usando o centroide */
-  margin-top: 350px;
-  z-index: 0;
+  margin-top: -110px;
+  z-index: 1;
 }
 
 .retangulo-mecanico {
