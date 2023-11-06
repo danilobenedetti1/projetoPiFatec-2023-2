@@ -18,10 +18,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $row = mysqli_fetch_assoc($result);
         $_SESSION['id'] = $row['id'];
         $_SESSION['nome'] = $row['nome'];
-        header('Location: dashboard.html'); // Redireciona para a página de dashboard
+        header("Location: https://dbrzumbi.000webhostapp.com/NETCAR/view/dashboard.html"); // Redireciona para a página de dashboard
     } else {
         echo '<script>alert("Email ou senha incorretos!")</script>'; 
-        header("Location: index.html#paralogin");               
+        header("Location: https://dbrzumbi.000webhostapp.com/NETCAR/view/cadastrar.html#paralogin");               
     }
 }
 
