@@ -255,6 +255,16 @@ h1 {
 .veiculo label, .veiculo input {
     display: block;
     margin-bottom: 10px;
+    width:400px;
+    text-align: center;
+}
+
+.veiculo textarea {
+  display: block;
+  margin-bottom: 10px;
+  width:900px;
+  height: 250px;
+  text-align: center;
 }
 
 .veiculo button {
