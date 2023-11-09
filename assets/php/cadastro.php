@@ -1,5 +1,12 @@
 <?php
+session_start();
 header('Access-Control-Allow-Origin: *');
+
+if (!isset($_SESSION['id'])) {
+    // O usuário não está autenticado, redirecione para a página de login
+    header("Location: https://dbrzumbi.000webhostapp.com/NETCAR/view/cadastrar.html#paralogin");
+    exit();
+}
 
 $connect = new PDO("mysql:host=localhost;dbname=id21179013_fatec", "id21179013_admin", "Pi_12345");
 $received_data = json_decode(file_get_contents("php://input"));
