@@ -53,7 +53,7 @@ if ($received_data->action == 'insert') {
 
     echo json_encode($output);
 }
-// verificar com o márcio como implementar o script para buscar o id do usuário ao invés do veículo
+
 if ($received_data->action == 'fetchSingle') {
     $userId = $_SESSION['id'];
     $query = "
@@ -115,6 +115,7 @@ if ($received_data->action == 'update') {
 }
 
 if ($received_data->action == 'delete') {
+    error_log("Deleting veicId: " . $received_data->veicId); // Adicione esta linha
     $query = "
  DELETE FROM netcar_veic 
  WHERE veicId = '" . $received_data->veicId . "'

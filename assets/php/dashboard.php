@@ -1,6 +1,12 @@
 <?php
-
+session_start();
 header('Access-Control-Allow-Origin: *');
+
+if (!isset($_SESSION['id'])) {
+    // O usuário não está autenticado, redirecione para a página de login
+    header("Location: https://dbrzumbi.000webhostapp.com/NETCAR/view/cadastrar.html#paralogin");
+    exit();
+}
 
 $connect = new PDO("mysql:host=localhost;dbname=id21179013_fatec", "id21179013_admin", "Pi_12345");
 
@@ -12,7 +18,8 @@ if($received_data->query != '')
 {
     $userId = $_SESSION['id'];
 	$query = "
-    SELECT * FROM netcar_veic 
+    SELECT modelo1, ano1, placa1, data1, time1, descricao
+	FROM netcar_veic 
 	WHERE WHERE user_id = '$userId' 
 	ORDER BY id DESC
 	";
