@@ -1,22 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="/assets/css/dashboard.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/login.css">
     <title>DASHBOARD</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
-    </script>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="global.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-    <script src="agendamento.js" defer></script>
-    <link rel="shortcut icon" href="carro.png" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 
 <body>
@@ -47,16 +37,104 @@
                 </ul>
             </nav>
         </div>
-        <div class="menu"><i class="bi bi-list"></i></div>
-       
-            <h2></h2>
-            <div class="input-container">
-                <input type="text" id="placaInput" placeholder="Digite a placa do veículo">
-                <button id="buscarBtn">Buscar</button>
-            </div>
-            <div class="result" id="result">Informações do Veiculo</div>
     </section>
-    <script src="/assets/js/dashboard.js"></script>
+    </br>
+    </br>
+    <div class="container" id="crudApp">
+        <div class="panel panel-default">
+        <div class="panel-heading">
+          <div class="row">
+            <div class="col-md-6">
+              <h3 class="panel-title">Histórico de Agendamentos</h3>
+            </div>
+          </div>
+        </div>
+        <div class="panel-body">
+          <div class="table-responsive">
+            <table class="table table-bordered table-striped">
+              <tr>
+                <th>Veículo</th>
+                <th>Ano</th>
+                <th>Placa</th>
+                <th>Data do Agendamento</th>
+                <th>Horário agendado</th>
+                <th>Descrição do problema</th>
+                <th>Alterar Agendamento</th>
+                <th>Cancelar Agendamento</th>
+              </tr>
+              <tr v-for="row in allData">
+                <td>{{ row.modelo1 }}</td>
+                <td>{{ row.ano1 }}</td>
+                <td>{{ row.placa1 }}</td>
+                <td>{{ row.data1 }}</td>
+                <td>{{ row.time1 }}</td>
+                <td>{{ row.descricao }}</td>
+                <td>
+                  <button type="button" name="edit" class="btn btn-primary btn-xs edit" @click="fetchData(row.veicId)">
+                    Alterar
+                  </button>
+                </td>
+                <td>
+                  <button type="button" name="delete" class="btn btn-danger btn-xs delete" @click="deleteData(row.veicId)">
+                    Cancelar agendamento
+                  </button>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div v-if="myModel">
+        <transition name="model">
+          <div class="modal-mask">
+            <div class="modal-wrapper">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" @click="myModel=false">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">Alterar agendamento</h4>
+                  </div>
+                  <div class="modal-body">
+                    <div class="form-group">
+                      <label>Veículo</label>
+                      <input type="text" class="form-control" v-model="modelo1" />
+                    </div>
+                    <div class="form-group">
+                      <label>Ano</label>
+                      <input type="text" class="form-control" v-model="ano1" />
+                    </div>
+                    <div class="form-group">
+                        <label>Placa</label>
+                        <input type="text" class="form-control" v-model="placa1" />
+                    </div>
+                    <div class="form-group">
+                        <label>Data Atendimento</label>
+                        <input type="text" class="form-control" v-model="data1" />
+                    </div>
+                    <div class="form-group">
+                        <label>Horário</label>
+                        <input type="text" class="form-control" v-model="time1" />
+                    </div>
+                    <div class="form-group">
+                        <label>Histórico</label>
+                        <input type="text" class="form-control" v-model="descricao" />
+                    </div>
+                    <br />
+                    <div align="center">
+                      <input type="hidden" v-model="hiddenId" />
+                      <input type="button" class="btn btn-success btn-xs" v-model="actionButton" @click="submitData" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </transition>
+      </div>
+    </div>
+    </section>
 </body>
 
 <footer class="footer">
@@ -65,3 +143,132 @@
 </footer>
 
 </html>
+
+
+<script>
+    var application = new Vue({
+      el: "#crudApp",
+      data: {
+        allData: "",
+        myModel: false,
+        actionButton: "Agendar",
+        allData: "",
+        modelo1: "", // Adicione esta linha
+        ano1: "", // Adicione outras propriedades se necessário
+        placa1: "",
+        data1: "",
+        time1: "",
+        descricao: "",
+        hiddenId: "",
+      },
+      methods: {
+        fetchAllData: function () {
+          axios
+            .post("/NETCAR/assets/php/cadastro.php", {
+              action: "fetchall",
+            })
+            .then(function (response) {
+              application.allData = response.data;
+            });
+        },
+        openModel: function () {
+          application.modelo1 = "";
+          application.ano1 = "";
+          application.placa1 = "";
+          application.data1 = "";
+          application.time1 = "";
+          application.descricao = "";
+          application.actionButton = "Agendar";
+          application.myModel = true;
+        },
+        submitData: function () {
+          if (application.modelo1 != "" && application.ano1 != "" && application.placa1 != "" && application.data1 != "" && application.time1 != "" && application.descricao != "") {
+            if (application.actionButton == "Agendar") {
+              axios
+                .post("/NETCAR/assets/php/cadastro.php", {
+                  action: "insert",
+                  modelo1: application.modelo1,
+                  ano1: application.ano1,
+                  placa1: application.placa1,
+                  data1: application.data1,
+                  time1: application.time1,
+                  descricao: application.descricao
+                })
+                .then(function (response) {
+                  application.myModel = false;
+                  application.fetchAllData();
+                  application.modelo1 = "";
+                  application.ano1 = "";
+                  application.placa1 = "";
+                  application.data1 = "";
+                  application.time1 = "";
+                  application.descricao = "";
+                  alert(response.data.message);
+                });
+            }
+            if (application.actionButton == "Update") {
+              axios
+                .post("/NETCAR/assets/php/cadastro.php", {
+                  action: "update",
+                  modelo1: application.modelo1,
+                  ano1: application.ano1,
+                  placa1: application.placa1,
+                  data1: application.data1,
+                  time1: application.time1,
+                  descricao: application.descricao,
+                  hiddenId: application.hiddenId,
+                })
+                .then(function (response) {
+                  application.myModel = false;
+                  application.fetchAllData();
+                  application.modelo1 = "";
+                  application.ano1 = "";
+                  application.placa1 = "";
+                  application.data1 = "";
+                  application.time1 = "";
+                  application.descricao = "";
+                  application.hiddenId = "";
+                  alert(response.data.message);
+                });
+            }
+          } else {
+            alert("Complete todos os dados!!!");
+          }
+        },
+        fetchData: function (veicId) {
+          axios
+            .post("/NETCAR/assets/php/cadastro.php", {
+              action: "fetchSingle",
+              veicId: veicId,
+            })
+            .then(function (response) {
+              application.modelo1 = response.data.modelo1;
+              application.ano1 = response.data.ano1;
+              application.placa1 = response.data.placa1;
+              application.data1 = response.data.data1;
+              application.time1 = response.data.time1;
+              application.hiddenId = response.data.veicId;
+              application.myModel = true;
+              application.actionButton = "Update";
+            });
+        },
+        deleteData: function (veicId) {
+
+          if (confirm("Você tem certeza que deseja cancelar o agendamento?")) {
+            axios
+              .post("/NETCAR/assets/php/cadastro.php", {
+                action: "delete",
+                veicId: veicId,
+              })
+              .then(function (response) {
+                application.fetchAllData();
+                alert(response.data.message);
+              });
+          }
+        },
+      },
+      created: function () {
+        this.fetchAllData();
+      },
+    });
+  </script>

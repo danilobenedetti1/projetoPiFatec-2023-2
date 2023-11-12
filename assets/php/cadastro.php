@@ -116,8 +116,8 @@ if ($received_data->action == 'update') {
 
 if ($received_data->action == 'delete') {
     $query = "
- DELETE * FROM netcar_veic 
- WHERE veicId = '" . $received_data->id . "'
+ DELETE FROM netcar_veic 
+ WHERE veicId = '" . $received_data->veicId . "'
  ";
 
     $statement = $connect->prepare($query);
