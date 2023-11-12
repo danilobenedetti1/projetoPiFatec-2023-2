@@ -236,11 +236,11 @@
             alert("Complete todos os dados!!!");
           }
         },
-        fetchData: function (veicId) {
+        fetchData: function (id) {
           axios
             .post("/NETCAR/assets/php/cadastro.php", {
               action: "fetchSingle",
-              veicId: application.hiddenId,
+              id: id,
             })
             .then(function (response) {
               application.modelo1 = response.data.modelo1;
@@ -248,19 +248,18 @@
               application.placa1 = response.data.placa1;
               application.data1 = response.data.data1;
               application.time1 = response.data.time1;
-              application.hiddenId = response.data.veicId;
+              application.hiddenId = response.data.id;
               application.myModel = true;
               application.actionButton = "Update";
             });
         },
-        deleteData: function (veicId) {
-            console.log("Deleting veicId:", veicId); // verificar erro
-
+        deleteData: function (id) {
+          
           if (confirm("Você tem certeza que deseja cancelar o agendamento?")) {
             axios
               .post("/NETCAR/assets/php/cadastro.php", {
                 action: "delete",
-                veicId: application.hiddenId,
+                id: id,
               })
               .then(function (response) {
                 application.fetchAllData();
