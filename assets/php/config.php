@@ -1,6 +1,6 @@
 <?php
 
-$host = "localhost"; // nome do servidor MySQL
+$host = "https://databases.000webhost.com/"; // nome do servidor MySQL
 $user = "id21539908_admin"; // usuário do MySQL
 $pass = "Pi_12345"; // senha do MySQL
 $dbname = "id21539908_netcar"; // nome do banco de dados
