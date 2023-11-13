@@ -8,7 +8,7 @@ if (!isset($_SESSION['id'])) {
     exit();
 }
 
-$connect = new PDO("mysql:host=localhost;dbname=id21539908_netcar", "id21539908_admin", "Pi_12345");
+$connect = new PDO("mysql:host=https://databases.000webhost.com/;dbname=id21539908_netcar", "id21539908_admin", "Pi_12345");
 $received_data = json_decode(file_get_contents("php://input"));
 $data = array();
 if ($received_data->action == 'fetchall') {
