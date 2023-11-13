@@ -206,6 +206,15 @@ p {
   background-image: linear-gradient(190deg, #1183DC 0%, #0A4D94 100%);
 }
 
+.panel-body{
+  font-size: 12px;
+  color: var(--cor-texto-preto);
+  padding: 0px 0;
+  font-family: var(--fonte-principal);
+  font-weight: 800;
+  text-align: justify;
+  padding-bottom: 10px;
+}
 
   
   /**** advanced input styling ****/

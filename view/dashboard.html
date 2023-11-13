@@ -124,7 +124,7 @@
                     <br />
                     <div align="center">
                       <input type="hidden" v-model="hiddenId" />
-                      <input type="button" class="btn btn-success btn-xs" v-model="actionButton" @click="submitData" />
+                      <input type="button" class="btn btn-success btn-xs" v-model="actionButton" @click="submitData"/>
                     </div>
                   </div>
                 </div>
@@ -153,8 +153,8 @@
         myModel: false,
         actionButton: "Agendar",
         allData: "",
-        modelo1: "", // Adicione esta linha
-        ano1: "", // Adicione outras propriedades se necessário
+        modelo1: "", 
+        ano1: "",
         placa1: "",
         data1: "",
         time1: "",
@@ -164,7 +164,7 @@
       methods: {
         fetchAllData: function () {
           axios
-            .post("/NETCAR/assets/php/cadastro.php", {
+            .post("/assets/php/cadastro.php", {
               action: "fetchall",
             })
             .then(function (response) {
@@ -185,7 +185,7 @@
           if (application.modelo1 != "" && application.ano1 != "" && application.placa1 != "" && application.data1 != "" && application.time1 != "" && application.descricao != "") {
             if (application.actionButton == "Agendar") {
               axios
-                .post("/NETCAR/assets/php/cadastro.php", {
+                .post("/assets/php/cadastro.php", {
                   action: "insert",
                   modelo1: application.modelo1,
                   ano1: application.ano1,
@@ -208,7 +208,7 @@
             }
             if (application.actionButton == "Update") {
               axios
-                .post("/NETCAR/assets/php/cadastro.php", {
+                .post("/assets/php/cadastro.php", {
                   action: "update",
                   modelo1: application.modelo1,
                   ano1: application.ano1,
@@ -237,7 +237,7 @@
         },
         fetchData: function (veicId) {
           axios
-            .post("/NETCAR/assets/php/cadastro.php", {
+            .post("/assets/php/cadastro.php", {
               action: "fetchSingle",
               veicId: veicId,
             })
@@ -256,7 +256,7 @@
 
           if (confirm("Você tem certeza que deseja cancelar o agendamento?")) {
             axios
-              .post("/NETCAR/assets/php/cadastro.php", {
+              .post("/assets/php/cadastro.php", {
                 action: "delete",
                 veicId: veicId,
               })

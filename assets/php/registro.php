@@ -22,10 +22,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $query = "INSERT INTO netcar_user (nome, email, senha) VALUES ('$nome', '$email', md5('$senha'))";
         if (mysqli_query($conn, $query)) {
             echo '<script>alert("Usuário cadastrado com sucesso!")</script>';
-            header("Location: https://dbrzumbi.000webhostapp.com/NETCAR/view/cadastrar.html#paralogin");
+            header("Location: https://oficinanetcar.000webhostapp.com/view/login.html#paralogin");
         } else {
             echo '<script>alert("Erro ao cadastrar usuário!")</script>';
-            header("Location: https://dbrzumbi.000webhostapp.com/NETCAR/view/cadastrar.html#paracadastro");
+            header("Location: https://oficinanetcar.000webhostapp.com/view/login.html#paracadastro");
         }
     }
 }

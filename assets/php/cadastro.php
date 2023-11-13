@@ -4,11 +4,11 @@ header('Access-Control-Allow-Origin: *');
 
 if (!isset($_SESSION['id'])) {
     // O usuário não está autenticado, redirecione para a página de login
-    header("Location: https://dbrzumbi.000webhostapp.com/NETCAR/view/cadastrar.html#paralogin");
+    header("Location: https://oficinanetcar.000webhostapp.com/view/login.html#paralogin");
     exit();
 }
 
-$connect = new PDO("mysql:host=localhost;dbname=id21179013_fatec", "id21179013_admin", "Pi_12345");
+$connect = new PDO("mysql:host=localhost;dbname=id21539908_netcar", "id21539908_admin", "Pi_12345");
 $received_data = json_decode(file_get_contents("php://input"));
 $data = array();
 if ($received_data->action == 'fetchall') {
@@ -75,7 +75,6 @@ if ($received_data->action == 'fetchSingle') {
         $data['data1'] = $row['data1'];
         $data['time1'] = $row['time1'];
         $data['descricao'] = $row['descricao'];
-        $data['first_name'] = $row['first_name'];
         $data['user_id'] = $row['user_id'];
     }
 

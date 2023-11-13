@@ -131,7 +131,7 @@ html {
   position:absolute;
   left: 50%;
   transform: translate(-50% , -50%); /* Centraliza a imagem usando o centroide */
-  margin-top: -110px;
+  margin-top: -10px;
   z-index: 1;
 }
 
